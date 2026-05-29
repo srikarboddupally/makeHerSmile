@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hey Likitha ✨</title>
+  <meta name="description" content="A special little corner of the internet, built just for Likitha.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>😁</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================
+       FLOATING BACKGROUND HEARTS
+       ========================================= -->
+  <div id="floating-bg"></div>
+
+  <!-- =========================================
+       INTRO OVERLAY — "You have a message"
+       ========================================= -->
+  <div id="intro-overlay">
+    <div class="intro-sparkles" id="intro-sparkles"></div>
+    <div class="envelope-wrapper">
+      <span class="envelope-icon">💌</span>
+      <p class="intro-text">You have a message, Likitha</p>
+      <p class="intro-subtext">Pichi lestunde while completing that challenge!!! so thought of making something fun n sweet :)</p>
+      <button class="open-btn" id="open-btn">Open it!!</button>
+    </div>
+  </div>
+
+  <!-- =========================================
+       SECTION 1 — HERO
+       ========================================= -->
+  <section id="hero" class="section">
+    <div class="hero-content" id="hero-content">
+      <p class="hero-greeting">hey you ✨</p>
+      <h1 class="hero-title">
+        <span class="typewriter-text" id="typewriter"></span>
+        <span class="cursor-blink" id="cursor-blink">|</span>
+      </h1>
+      <p class="hero-subtitle" id="hero-subtitle">
+        I made this little corner of the internet just for you.<br>
+        Scroll down, it gets better... I think 🤭
+      </p>
+      <div class="scroll-indicator" id="scroll-indicator">
+        <span>scroll down</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECTION 2 — DATE RECAP
+       ========================================= -->
+  <section id="recap" class="section">
+    <h2 class="section-title" data-animate>About Yesterday... 🥰</h2>
+    <div class="section-divider" data-animate></div>
+    <p class="section-subtitle" data-animate>a certified good time (your words, not mine... okay maybe mine too)</p>
+
+    <div class="recap-timeline">
+      <div class="recap-card" data-animate data-delay="0">
+        <div class="card-emoji">🍕</div>
+        <p>2 hours of talking at La Pino'z (and zero awkwardness)</p>
+      </div>
+      <div class="recap-card" data-animate data-delay="200">
+        <div class="card-emoji">🌸</div>
+        <p>You letting me completely overthink whether to bring flowers or not</p>
+      </div>
+      <div class="recap-card" data-animate data-delay="100">
+        <div class="card-emoji">🥷</div>
+        <p>Surviving the park (I was <i>this</i> close to activating John Wick mode)<i>(Konchem Flex..)</i></p>
+      </div>
+      <div class="recap-card" data-animate data-delay="300">
+        <div class="card-emoji">🏍️</div>
+        <p>That bike ride to Necklace Road with the comfortable silence</p>
+      </div>
+      <div class="recap-card special" data-animate data-delay="400">
+        <div class="card-emoji">✨</div>
+        <p>You texting me that it was actually a good time... despite zoning out 😂</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       MARQUEE — REASONS TICKER
+       ========================================= -->
+  <section id="marquee-section">
+    <div class="marquee-wrapper">
+      <div class="marquee-track" id="marquee-track">
+        <!-- Duplicated in JS for infinite scroll -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECTION 3 — THE BIG QUESTION
+       ========================================= -->
+  <section id="question" class="section">
+    <h2 class="section-title" data-animate>So... wanna do this again? 🤭</h2>
+    <div class="section-divider" data-animate></div>
+    <p class="section-subtitle" data-animate>choose wisely (or don't, the No button has anxiety)</p>
+
+    <div class="question-container">
+      <div class="funny-message" id="funny-message"></div>
+      <div class="buttons-area" id="buttons-area">
+        <button id="yes-btn" class="answer-btn yes-btn">YES! 💕</button>
+        <button id="no-btn" class="answer-btn no-btn">No 😐</button>
+      </div>
+      <div class="attempt-counter" id="attempt-counter"></div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       CELEBRATION OVERLAY
+       ========================================= -->
+  <div id="celebration" class="celebration">
+    <div class="confetti-container" id="confetti-container"></div>
+    <div class="celebration-content">
+      <h2>I KNEW IT! 🎉</h2>
+      <p>Best click you've ever made 😏</p>
+      <p class="sub-text">Now let's plan the next one ↓</p>
+      <button class="celebration-continue" id="celebration-continue">Let's goooo 🚀</button>
+    </div>
+  </div>
+
+  <!-- =========================================
+       SECTION 4 — DATE IDEAS
+       ========================================= -->
+  <section id="date-ideas" class="section">
+    <h2 class="section-title" data-animate>Where should we go next? 🗺️</h2>
+    <div class="section-divider" data-animate></div>
+    <p class="section-subtitle" data-animate>pick your favorites — yes, you can pick more than one 😉</p>
+
+    <div class="ideas-grid" id="ideas-grid">
+      <!-- Generated by JS -->
+    </div>
+
+    <div class="selected-summary" id="selected-summary">
+      <p>Great choices! I'll start planning 😎</p>
+      <span class="count" id="selected-count"></span>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECTION 5 — QUICK FIRE ROUND
+       ========================================= -->
+  <section id="quickfire" class="section">
+    <h2 class="section-title" data-animate>Quick Fire Round ⚡</h2>
+    <div class="section-divider" data-animate></div>
+    <p class="section-subtitle" data-animate>be honest... or don't. the No button is still recovering 😂</p>
+
+    <div class="quickfire-container" id="quickfire-container">
+      <!-- Generated by JS -->
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECTION 6 — REELS
+       ========================================= -->
+  <section id="reels" class="section">
+    <h2 class="section-title" data-animate>REELS !!!! 😂</h2>
+    <div class="section-divider" data-animate></div>
+    <p class="section-subtitle" data-animate>found these while scrolling at 2am (don't judge)</p>
+
+    <div class="reels-grid">
+      <!-- REEL 1: Jim Carrey -->
+      <div class="reel-card" data-animate>
+        <div class="reel-video-container">
+          <video src="reel1.mp4" controls loop playsinline></video>
+        </div>
+        <p class="reel-caption">"This was random! But I think you should know it.."</p>
+      </div>
+
+      <!-- REEL 2: Vitamin ME -->
+      <div class="reel-card" data-animate>
+        <div class="reel-video-container">
+          <video src="reel2.mp4" controls loop playsinline></video>
+        </div>
+        <p class="reel-caption">"I had to... sending this before I overthink it"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECTION 7 — CLOSING NOTE
+       ========================================= -->
+  <section id="closing" class="section">
+    <div class="closing-content" data-animate>
+      <h2 class="closing-title">Hey Likitha,</h2>
+      <p class="closing-text">
+        I promised I'd try to make the next time even better,<br>
+        so I had to bring out the developer skills for this.<br><br>
+        Just made this website for fun, hoping it would make you smile.<br>
+        Keep smiling! The world looks a lot more beautiful when you do.<br><br>
+        <span class="highlight">Here's to more "good times" ✨</span>
+      </p>
+
+      <div class="signature">
+        <p>Built with way too much nervous energy</p>
+        <span class="easter-egg" id="easter-egg">psst... click me for a secret 🤫</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       EASTER EGG MODAL
+       ========================================= -->
+  <div class="easter-egg-modal" id="easter-egg-modal">
+    <div class="easter-egg-card">
+      <span class="ee-emoji">😊</span>
+      <p class="ee-text">
+        I was nervous the entire date.<br>
+        Like, the ENTIRE time.<br><br>
+        But you made it so easy<br>
+        that I forgot to be scared.<br><br>
+        Thank you for that 💕
+      </p>
+      <button class="ee-close" id="ee-close">🥹 okay my heart</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
